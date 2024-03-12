@@ -10,9 +10,9 @@ import RightSidebar from "@/components/shared/RightSidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Social Apes',
-  description: 'A Next.js 13 Meta Social Apes Application',
-}
+  title: "Social Apes",
+  description: "A Next.js 13 Meta Social Apes Application",
+};
 
 export default function RootLayout({
   children,
@@ -24,17 +24,14 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Topbar />
-          <main>
+          <main className="flex flex-row">
             <LeftSidebar />
             <section className="main-container">
-              <div className="w-full max-w-4xl">
-                {children}
-              </div>
+              <div className="w-full max-w-4xl">{children}</div>
             </section>
             <RightSidebar />
           </main>
           <Bottombar />
-          {children}
         </body>
       </html>
     </ClerkProvider>
