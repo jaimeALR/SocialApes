@@ -6,7 +6,7 @@ import { dark } from "@clerk/themes";
 function Topbar() {
   return (
     <nav className="topbar">
-      <Link href="/" className="flex items-center gap 4">
+      <Link href="/" className="flex items-center gap-4">
         <Image
           src="/assets/logosocial.jpg"
           alt="logo"
