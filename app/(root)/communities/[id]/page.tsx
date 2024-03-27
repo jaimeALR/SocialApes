@@ -13,7 +13,6 @@ async function Page({ params }: { params: { id: string } }) {
   if (!user) return null;
 
   const communityDetails = await fetchCommunityDetails(params.id);
-  console.log(communityDetails)
   return (
     <section>
       <ProfileHeader
@@ -51,7 +50,7 @@ async function Page({ params }: { params: { id: string } }) {
             <ThreadsTab
               currentUserId={user.id}
               accountId={communityDetails._id}
-              accountType="User"
+              accountType="Community"
             />
           </TabsContent>
           <TabsContent value="members" className="w-full text-light-1">
